@@ -9,7 +9,7 @@ variable "subnet_ids" {
 }
 
 variable "availability_zones" {
-  description = "(optional) https://www.terraform.io/docs/providers/aws/r/rds_cluster.html#availability_zones"
+  description = "(required - plan will not be idempotent if empty) https://www.terraform.io/docs/providers/aws/r/rds_cluster.html#availability_zones"
   default     = []
 }
 
