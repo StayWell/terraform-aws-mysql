@@ -65,6 +65,9 @@ resource "aws_rds_cluster_parameter_group" "this" {
 
 resource "random_string" "this" {
   length = 32
+
+  # rds cluster password policy: Only printable ASCII characters besides '/', '@', '"', ' ' may be used.
+  override_special = "!#$%&*()-_=+[]{}<>:?"
 }
 
 resource "aws_security_group" "this" {
