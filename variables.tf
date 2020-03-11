@@ -62,3 +62,8 @@ variable "family" {
   description = "(optional) https://www.terraform.io/docs/providers/aws/r/rds_cluster_parameter_group.html#family"
   default     = "aurora5.6"
 }
+
+variable "snapshot_identifier" {
+  description = "(optional) https://www.terraform.io/docs/providers/aws/r/rds_cluster.html#snapshot_identifier"
+  default     = ""
+}

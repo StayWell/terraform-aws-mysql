@@ -12,6 +12,7 @@ resource "aws_rds_cluster" "this" {
   db_subnet_group_name            = "${aws_db_subnet_group.this.id}"
   db_cluster_parameter_group_name = "${aws_rds_cluster_parameter_group.this.id}"
   deletion_protection             = "${var.deletion_protection}"
+  snapshot_identifier             = "${var.snapshot_identifier}"
   tags                            = "${merge(map("Name", "${var.env}"), var.tags)}"
 
   scaling_configuration {
